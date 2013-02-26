@@ -18,7 +18,8 @@ func (u *User) list(page *util.PageMaker) []UserData {
     var l []UserData
     u.c.Find(nil).Sort("-_id").Skip(page.Begin).Limit(page.PerPage).All(&l)
     return l
-}```
+}
+```
 
 
 #显示：
