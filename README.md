@@ -7,12 +7,12 @@ a go class for page
 
 #用法：
 
-调用分页方法
+1、调用分页方法
 ```go
 page := util.NewPageMaker(num, p, "list")
 userList := user.list(page)
 ```
-Dao获取数据
+2、Dao获取数据
 ```go
 func (u *User) list(page *util.PageMaker) []UserData {
     var l []UserData
