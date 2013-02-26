@@ -8,17 +8,17 @@ a go class for page
 #用法：
 
 
-`
+```go
 page := util.NewPageMaker(num, p, "list")
 userList := user.list(page)
-`
+```
 
-`
+```go
 func (u *User) list(page *util.PageMaker) []UserData {
     var l []UserData
     u.c.Find(nil).Sort("-_id").Skip(page.Begin).Limit(page.PerPage).All(&l)
     return l
-}`
+}```
 
 
 #显示：
